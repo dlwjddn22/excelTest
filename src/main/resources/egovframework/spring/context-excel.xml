@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+	<bean id="categoryExcelView" class="egovframework.rte.fdl.excel.download.CategoryExcelView" />
+
+	<!-- XSSF 형태의 다운로드의 경우 다음의 View를 등록하여 사용한다. <bean id="CategoryPOIExcelView" 
+		class="egovframework.rte.fdl.excel.download.CategoryPOIExcelView" /> -->
+
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<property name="order" value="0" />
+	</bean>
+
+</beans>	
