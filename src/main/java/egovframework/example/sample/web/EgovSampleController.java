@@ -136,6 +136,35 @@ public class EgovSampleController {
 	 
 		return new ModelAndView("categoryExcelView", "categoryMap", map);
 	}
+	@RequestMapping(value = "/egovSampleListExcel1.do")
+	public ModelAndView selectSampleListExcel1() throws Exception {
+		
+		List<UsersVO> lists = new ArrayList<UsersVO>();
+		
+		UsersVO users = new UsersVO();
+		
+		//Map<String, String> mapCategory = new HashMap<String, String>();
+		users.setId("0000000001");
+		users.setName("Sample Test");
+		users.setDescription("This is initial test data.");
+		users.setUseyn("Y");
+		users.setReguser("test");
+		
+		lists.add(users);
+		
+		users.setId("0000000002");
+		users.setName("test Name");
+		users.setDescription("test Deso1111");
+		users.setUseyn("Y");
+		users.setUseyn("test");
+		
+		lists.add(users);
+		
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("category", lists);
+		
+		return new ModelAndView("categoryExcelView1", "categoryMap", map);
+	}
 
 	/**
 	 * 글 등록 화면을 조회한다.
